@@ -1,0 +1,32 @@
+hazlecast:
+  cluster-name: vld
+  management-center:
+    scripting-enabled: false
+  network:
+    port:
+      auto-increment: true
+      port-count: 100
+      port: 5701
+  advanced-network:
+    enabled: false
+    join:
+      multicast:
+        enabled: false
+      tcp-ip:
+        enabled: true
+        connection-timeout-seconds: 30
+        required-member: dummy
+        member: dummy1,dummy2
+        interface: 127.0.0.10
+        members: dummy3,dummy4
+        member-list:
+          - localhost
+  replicatedmap:
+    data1map:
+      in-memory-format: BINARY
+      async-fillup: true
+      statistics-enabled: true
+    data2map:
+      in-memory-format: BINARY
+      async-fillup: true
+      statistics-enabled: true

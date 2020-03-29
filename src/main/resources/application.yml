@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: springboot-hazelcast
+server:
+  port: 12018
