@@ -13,6 +13,7 @@ public class TestConfig {
     @Test
     public void testConfig() throws FileNotFoundException {
         String configfile="hazelcast-config.yaml";
+        //yaml config not yet working
         YamlConfigBuilder yamlConfigBuilder=new YamlConfigBuilder(configfile);
         Config config=yamlConfigBuilder.build();
         assertNotNull(config);
